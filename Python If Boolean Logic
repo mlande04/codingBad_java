@@ -1,0 +1,16 @@
+Python If Boolean Logic
+In Python, use == to compare two things for equality -- works for int values, strings, lists ... anything. Python supports all the standard operators to compare two values: == != < <= > >=. The boolean operators are written out as and or not. Here's an example if-statement:
+
+def if_demo(s):
+  if s == 'Hello' or s == 'Hi':
+    s = s + ' nice to meet you'
+  else:
+    s = s + ' woo hoo!'
+  return s
+Notice above that you do not need to add parenthesis ( ) around the test -- other languages require the parenthesis, so many people add them out of habit. Also, forgetting the colon ":" after the test is a common syntax error when learning Python.
+
+As is standard, the precedence of "and" is higher than "or" ("and" is like arithmetic *, "or" is like arithmetic +). The if statement can be followed by an optional elif test2: which adds another test if the first test fails, and there can be a final else: which runs if all the tests are false.
+
+In Python, there are False and True literal values, many times you do not need to use them directly. The number 0, the empty string "", the empty list [], and the special None value all count as False when used in a boolean context, such as an if-test.
+
+CodingBat.com code practice. Copyright 2010 Nick Parlante.
