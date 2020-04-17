@@ -1,0 +1,38 @@
+ Python Lists
+This is an introduction to Python lists, as used in the CodingBat Python practice problems, specifically in the List-1 and List-2 sections.
+
+A Python list can hold any number of things in a linear collection (similar to the "array" in other languages). Use the len() function to check the length of a list and the square bracekts [ ] to access individual elements (in this way, lists work just like strings):
+
+  a = ['hi', 'there', '!']  # a list with 3 elements
+  len(a)       ## 3
+  a[0]         ## 'hi'
+  a[2] = 'ho'  ## Can change an existing element
+The .append(value) method on a list adds an element to its end, and the sorted(list) function takes in a list and returns a new list sorted into increasing order:
+
+  a = ['hi', 'there']
+  a.append('aa')  ## use .append() to add elements to the end
+  a.append('bb')
+  ## now a is ['hi', 'there', 'aa', 'bb']
+  b = sorted(a)  # b is ['aa', 'bb', 'hi', 'there'], a is unchanged
+Python List Loop
+The easiest way to access elements in a list with a loop:
+
+  a = [1, 2, 3]
+  sum = 0
+  for num in a:  ## iterate num over values 1, 2, 3
+    sum = sum + num
+Another way to loop over a list is using the range(n) function witch returns the sequence 0, 1, 2, ... n-1, so for i in range(len(list)): iterates over the index numbers of a list, like this:
+
+  a = ['hi', 'there', 'ok']
+  result = ''
+  for i in range(len(a)):
+    # i will be 0, 1, 2 ... use a[i] to look at each element.
+    # Here we just accumulate the a[i] strings
+    result = result + a[i]
+This form of loop gives flexiblity to refer to the element to the left (a[i-1]) or the next element (a[i+1]) within the loop, however be careful not to refer past the end of the list, len(a)-1 is the max allowed index.
+
+Python lists also support the "slice" syntax to refer to subparts of a list -- slices are discussed in the Python Strings doc, and work analogously for lists.
+
+Sorting: the easiest way to sort a list is with the sorted(list) function which takes in any collection and returns a new list, sorted into increasing order.
+
+CodingBat.com code practice. Copyright 2010 Nick Parlante.
